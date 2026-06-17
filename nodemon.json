@@ -1,0 +1,10 @@
+{
+  "ext": "js,mjs,cjs",
+  "ignore": [
+    "src/data/*",
+    "data/*",
+    "Lavalink/**/*",
+    "*.json"
+  ],
+  "delay": 500
+}

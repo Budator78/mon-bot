@@ -1,0 +1,76 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.1"
+      snapshot: false
+  server:
+    password: "youshallnotpass"
+    sources:
+      youtube: false  # Important : On désactive le natif pour utiliser le plugin
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelMix: true
+      lowPass: true
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: LOW
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    gc-warnings: true
+
+plugins:
+  youtube:
+    enabled: true
+    # === CONFIG MAISON / IP RÉSIDENTIELLE (active) ===
+    # Sur une IP résidentielle, les clients Android (sans cipher) fonctionnent et
+    # YouTube ne réclame pas de login : pas besoin d'OAuth.
+    clients:
+      - ANDROID_VR
+      - IOS
+      - ANDROID_MUSIC
+    # === CONFIG CLOUD (datacenter, ex. Google Cloud) — à réactiver QUAND youtube-source
+    # aura corrigé le bug de cipher "must find sig function". Décommenter ce bloc et
+    # commenter les clients Android ci-dessus :
+    # oauth:
+    #   enabled: true
+    #   refreshToken: "ton_refresh_token_du_serveur"
+    # clients:
+    #   - MUSIC
+    #   - WEB
+    #   - TV
+
+metrics:
+  prometheus:
+    enabled: false
+    endpoint: /metrics
+
+sentry:
+  dsn: ""
+  environment: ""
+
+logging:
+  file:
+    path: ./logs/
+  level:
+    root: INFO
+    lavalink: INFO

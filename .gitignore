@@ -1,0 +1,17 @@
+# --- Secrets (NE JAMAIS COMMIT) ---
+config.json
+
+# --- Dépendances & binaires (regénérés / retéléchargés) ---
+node_modules/
+Lavalink/Lavalink.jar
+Lavalink/plugins/
+Lavalink/logs/
+*.zip
+
+# --- Réglages locaux / éditeur ---
+.claude/
+.vscode/
+.DS_Store
+
+# --- Données générées à l'exécution (recréées automatiquement) ---
+src/data/*.json

@@ -1,0 +1,14 @@
+{
+    "token": "TON_TOKEN_DISCORD_ICI",
+    "clientId": "TON_CLIENT_ID",
+    "guildId": "TON_GUILD_ID",
+    "lavalink": [
+        {
+            "name": "LocalNode",
+            "url": "localhost:2333",
+            "auth": "youshallnotpass"
+        }
+    ],
+    "hymne1": "https://www.youtube.com/watch?v=...",
+    "hymne2": "https://www.youtube.com/watch?v=..."
+}
