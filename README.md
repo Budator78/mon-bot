@@ -36,4 +36,4 @@ npm install
 - **Windows (dev)** : `start_bot.bat` (lance Lavalink + le bot via nodemon).
 - **Serveur 24/7 (Linux)** : avec [pm2](https://pm2.keymetrics.io/) → `pm2 start ecosystem.config.js`.
 
-> ⚠️ Ne committe jamais `config.json` (il contient ton token) — il est déjà dans `.gitignore`.
+
